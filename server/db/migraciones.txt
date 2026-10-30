@@ -1,0 +1,13 @@
+# Migraciones fechadas, en orden de aplicación. Lista ÚNICA: la leen las pruebas
+# (server/db/pruebas/verificar-migracion.sh) y la demo local (scripts/demo/), así
+# que las dos aplican exactamente lo mismo. Una migración nueva se añade aquí a
+# conciencia, no por un `ls`: el orden importa.
+#
+# Empieza en el RBAC porque schema.sql ya trae el estado final de las
+# anteriores (2026_08_harden_rls y 2026_08_admin) y la fixture de las pruebas lo
+# reproduce. Una línea por archivo; las que empiezan por # se ignoran.
+2026_08_rbac.sql
+2026_08_ajustes.sql
+2026_09_sucursal.sql
+2026_09_miembros.sql
+2026_10_checkin.sql

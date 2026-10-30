@@ -1,0 +1,102 @@
+# gym-platform-demo — .gitignore
+# Stack: React + Vite (client) · Node/Express (server) · Supabase · Vercel
+
+# ── Dependencias ─────────────────────────────
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+
+# ── Builds / salidas de compilación ──────────
+dist/
+build/
+out/
+.output/
+*.tsbuildinfo
+
+# ── Variables de entorno y secretos ──────────
+# Se ignoran TODOS los .env excepto las plantillas *.example
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.local
+
+# Claves, certificados y credenciales
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+id_rsa*
+id_ed25519*
+credentials.json
+secrets.json
+service-account*.json
+
+# ── Logs ─────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ── Cache y temporales ───────────────────────
+.cache/
+.temp/
+.tmp/
+tmp/
+*.tmp
+.vite/
+.eslintcache
+# Estado local del CLI de Supabase (demo local): se regenera, no se versiona
+supabase/.branches/
+.npm/
+
+# ── Base de datos local, dumps y backups ─────
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.dump
+*.sql.gz
+*.bak
+*.backup
+backups/
+
+# ── Uploads en desarrollo ────────────────────
+uploads/
+
+# ── Vercel ───────────────────────────────────
+.vercel/
+
+# ── Cobertura de tests (futuro) ──────────────
+coverage/
+.nyc_output/
+
+# ── Editores / IDE ───────────────────────────
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json.example
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+
+# ── Sistema operativo ────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/

@@ -1,0 +1,37 @@
+# Normalización de fin de línea: evita el "churn" CRLF/LF entre Windows y CI/Vercel.
+# Git guarda LF en el repo y convierte al checkout según cada plataforma.
+* text=auto eol=lf
+
+# Scripts que deben conservar LF siempre (se ejecutan en Linux/serverless)
+*.sh   text eol=lf
+*.mjs  text eol=lf
+*.js   text eol=lf
+*.jsx  text eol=lf
+*.cjs  text eol=lf
+*.json text eol=lf
+*.css  text eol=lf
+*.html text eol=lf
+*.md   text eol=lf
+*.sql  text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+
+# Binarios: nunca aplicar normalización de texto ni diffs
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.mp4  binary
+*.webm binary
+*.mov  binary
+*.woff binary
+*.woff2 binary
+*.ttf  binary
+*.otf  binary
+*.eot  binary
+*.pdf  binary
+
+# Lockfiles: tratarlos como generados (colapsa diffs en la UI de GitHub)
+package-lock.json linguist-generated=true

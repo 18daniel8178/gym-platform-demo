@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/webp" href="/src/assets/logo.webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <title>FORJA GYM — Demo de plataforma para gimnasios</title>
+    <meta
+      name="description"
+      content="Demo con datos ficticios de una plataforma para gimnasios: horarios, aforo en vivo, membresías en línea con pago simulado, panel del socio con carnet QR y backoffice."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="FORJA GYM" />
+    <meta property="og:title" content="FORJA GYM — Demo de plataforma para gimnasios" />
+    <meta
+      property="og:description"
+      content="Gimnasio ficticio para demostrar la plataforma: membresías en línea, carnet QR y backoffice."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <script>
+      // Anti-flash: aplica el tema guardado antes de que React renderice
+      document.documentElement.dataset.theme = localStorage.getItem('forja-theme') || 'dark'
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
